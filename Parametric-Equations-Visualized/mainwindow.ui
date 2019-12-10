@@ -17,12 +17,76 @@
    <widget class="RenderArea" name="renderArea" native="true">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>290</y>
-      <width>581</width>
-      <height>221</height>
+      <x>30</x>
+      <y>40</y>
+      <width>431</width>
+      <height>341</height>
      </rect>
     </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>40</y>
+      <width>271</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="btn_Astroid">
+       <property name="text">
+        <string>Astroid</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Cycloid">
+       <property name="text">
+        <string>Cycloid</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="HuygensCycloid">
+       <property name="text">
+        <string>Huygens Cycloid</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="HypoCycloid">
+       <property name="text">
+        <string>Hypo Cycloid</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>4</width>
+      <height>4</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

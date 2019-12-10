@@ -15,6 +15,14 @@ public:
 
     QSize minimumSizeHint() const Q_DECL_OVERRIDE;
     QSize sizeHint() const Q_DECL_OVERRIDE;
+    enum shapes {
+        Astroid,
+        Cycloid,
+        HuygensCycloid,
+        HypoCycloid
+    };
+    void setBackgroundColor(QColor color) {mBackgroundColor=color;}
+    QColor backgroungColor () const {return mBackgroundColor;}
 
 protected:
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
