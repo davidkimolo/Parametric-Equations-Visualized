@@ -20,7 +20,16 @@ QSize RenderArea::sizeHint() const
 {
     return QSize(400, 200);
 }
+QPointF RenderArea::compute_astroid(float t)
+{
+    //astroid function
+    float cos_t = cos (t);
+    float sin_t = sin (t);
+    float x = 2 * cos_t * cos_t * cos_t;
+    float y = 2 * sin_t * sin_t *sin_t;
 
+    return QPointF(x, y);
+}
 void RenderArea::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event) // Removing the warning of the unused event
@@ -53,6 +62,23 @@ void RenderArea::paintEvent(QPaintEvent *event)
 
     //This is where the drawing will happen
     painter.drawRect(this->rect());
-    painter.drawLine(this->rect().topLeft(), this->rect().bottomRight());
+
+    QPoint center = this->rect().center();
+
+    // Drawing the Astroid
+    int stepCount = 64;
+    float scale = 40;
+    float intervalLength = 2 * M_PI;
+    float step = intervalLength / stepCount;
+    for (float t = 0; t < intervalLength; t+=step)
+    {
+        QPointF point = compute_astroid (t);
+
+        // temporary holding values
+        QPoint pixel;
+        pixel.setX(point.x() * scale + center.x());
+        pixel.setX(point.y() * scale +center.y());
+        painter.drawPoint(pixel);
+    }
 
 }
