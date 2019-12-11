@@ -5,7 +5,8 @@ A program written in C++ and the QT framework to visualize Parametric Equations.
 
 *Based on a course*
 ## Screenshot
-![screenshot] (<a href="https://ibb.co/m4xTWjZ"><img src="https://i.ibb.co/cQm3nBf/screenshot.png" alt="screenshot" border="0"></a>) 
+
+<a href="https://ibb.co/m4xTWjZ"><img src="https://i.ibb.co/cQm3nBf/screenshot.png" alt="screenshot" border="0"></a>
 
 ## Objectives 
 - Implementing render area
